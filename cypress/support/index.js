@@ -18,3 +18,9 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+
+before(function(){
+    cy.fixture('locators/searchpage.json').as('poSearchPage')
+    cy.fixture('locators/aboutpage.json').as('poAboutPage')
+})
